@@ -3,6 +3,7 @@ package com.zzcx.springboot;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 import tk.mybatis.spring.annotation.MapperScan;
 
@@ -11,6 +12,9 @@ import tk.mybatis.spring.annotation.MapperScan;
 @MapperScan("com.zzcx.springboot.mapper")
 //扫描所有需要扫描的包，包括一些自用的工具类包所在的路径
 @ComponentScan(basePackages={"com.zzcx.springboot","org.n3r.idworker"})
+
+//开启定时任务
+@EnableScheduling
 public class SpringbootApplication {
 
 	public static void main(String[] args) {
